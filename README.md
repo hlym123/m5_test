@@ -2,23 +2,13 @@
 
  
 
- * 工作指引 
-	* 邮件交接规范 https://doc.weixin.qq.com/doc/w3_AYsAYQbiAAYCNsb0N9BrjQhCsdD09?scode=AGgAFgfmAAkVeqPK1AAYsAYQbiAAY
+* 说明 
+* 测试项目编号说明
+* 测试项 
 
-<section class="sel" data-key="GROVE">
 
-## 1. Grove 接口
 
-| 测试项 | 说明 | 判定标准|
-| -------- | ---- | ---- |
-| 5V 输出供电 | 测量空载电压，最大带负载能力 | 空载 ≤ 5.25V，500mA 时 ≥ 4.75V |
-| 5V 输入供电 | 测量过压保护，反接保护功能 | 根据具体电路设计确定 |
-| I/O 连通性 | 使用 Grove 测试治具测试 | 可以控制 LED 亮灭 |
-| I2C 通信 | 20cm / 2m，400KHz | 可以正常通信 |
-| UART 通信 | 20cm / 2m，最大通信速率 | 可以正常通信 |
-
-</section>
-
+ 
 
 <section class="sel" data-key="USB">
 

@@ -1,52 +1,23 @@
 <!-- docs/_sidebar.md -->
 
+
+
+
  
-- [项目](./项目/intr.md) 
-    - [SOP](./项目/SOP.md)
-	- [NPI](./项目/NPI.md)
-- 硬件
-    - PC
-        - [intro](./next/pc/intro.md)
-    - Rock5B+
-        - [intro](./next/rock5b/intro.md)
-- 软件
-    - [显示屏](./软件/显示屏/intro.md)
-    	- 液晶屏
-    		- [ST7789](./软件/显示屏/液晶屏/ST7789.md) 
-    		- [ILI9881](./软件/显示屏/液晶屏/ILI9881.md) 
-    	- [墨水屏](./软件/显示屏/墨水屏/intro.md)
-    - [触摸屏](./软件/触摸屏/intro.md)
-    	- [FT6336U](./软件/触摸屏/FT6336U.md)
-		- [GT911](./软件/触摸屏/GT911.md)	
-    	- [CST3530](./软件/触摸屏/CST3530.md)
-		- [CST820](./软件/触摸屏/CST820.md)	
-- 测试
-    - [brief](./project/maixcam/brief.md)
-    - [LicheeRV-Nano](./project/maixcam/LicheeRV-Nano.md)
-    - [MaixCAM](./project/maixcam/MaixCAM.md)
-    - [MaixCDK](./project/maixcam/MaixCDK/index.md)
-        - [intro](./project/maixcam/MaixCDK/intro.md)
-        - [Examples](./project/maixcam/MaixCDK/examples.md)
-    - [MaixPy](./project/maixcam/MaixPy/index.md)
-        - [intro](./project/maixcam/MaixPy/intro.md)
-        - [Examples](./project/maixcam/MaixPy/examples.md)
-            - [显示屏](./project/maixcam/MaixPy/display.md)
-            - [摄像头](./project/maixcam/MaixPy/camera.md)
-            - [机器视觉](./project/maixcam/machine_vision.md)
-            - [AI 视觉](./project/maixcam/MaixPy/vision/index.md)
-                - [图像分类](./project/maixcam/MaixPy/vision/image_classify.md)
-                - [目标检测](./project/maixcam/MaixPy/vision/object_detection.md)
-                - [人脸及关键点检测](./project/maixcam/MaixPy/vision/face_detection.md)
-                - [人脸识别](./project/maixcam/MaixPy/vision/face_recognition.md)
-                - [人体关键点检测](./project/maixcam/MaixPy/vision/body_key_points.md)
-                - [图像语义分割](./project/maixcam/MaixPy/vision/segmentation.md)
-                - [自学习分类器](./project/maixcam/MaixPy/vision/self_learn_classifier.md)
-                - [自学习检测器](./project/maixcam/MaixPy/vision/self_learn_detector.md)
-            - [AI 听觉](./project/maixcam/MaixPy/audio/index.md)
-    - [入门使用](./project/maixcam/intro.md)
-    - [应用开发](./project/maixcam/app/intro.md)
-    - [开机自启动](./project/maixcam/auto_start.md)
-    - [MMF](./project/maixcam/MMF/intro.md)
-- 产测
-    - [intro](./project/cammv_k230/intro.md) 
- 
+- [文档说明](./文档说明/intro.md) 
+- [项目编号](./项目编号/intro.md) 
+- 测试项
+    - [可靠性测试](./测试项/可靠性测试.md)
+    - [功耗测试](./功测试项/耗测试.md)
+    - [M5Stack 产品](./测试项/M5Stack.md)
+    - [接口](./测试项/接口.md)
+    - [电源](./测试项/电源.md)
+    - [电池](./测试项/电池.md)
+    - [显示屏](./测试项/显示屏.md)
+    - [触摸屏](./功测试项/触摸屏.md)
+    - [摄像头](./测试项/摄像头.md)
+    - [音频](./测试项/音频.md)
+    - [无线通信](./测试项/无线通信.md)
+    - [有线通信](./测试项/有线通信.md)
+    - [传感器](./测试项/传感器.md)
+    - [执行器](./测试项/执行器.md)
