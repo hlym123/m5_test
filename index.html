@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <!-- Theme -->
+  <link rel="stylesheet" href="_styles/sidebar.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/vue.css"> 
+</head>
+<body>
+  <div id="app">加载中......</div>
+  <script>
+  window.$docsify = {
+    name: '🍉enable note',
+    repo: '',
+    auto2top: true,
+    coverpage: true, 
+    loadNavbar: true,
+    loadSidebar: true,
+        markdown: true,
+    subMaxLevel: 5, 
+        search: {
+          paths: 'auto',
+          placeholder: '🔍 搜索',
+          noData: '😒 找不到结果',
+          depth: 6,
+          maxAge: 86400000, 
+        },
+        ga: 'UA-164658031-2',
+        'flexible-alerts': {
+          style: 'callout'  
+        },
+  }
+  </script>
+
+  <!-- Docsify v4 插件 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <script src="./_scripts/docsify-sidebar-collapse.min.js"></script>
+  <script src="./_scripts/prism-c.min.js"></script>
+  <script src="./_scripts/prism-cpp.js"></script>
+  <script src="./_scripts/prism-python.js"></script>
+  <script src="./_scripts/docsify-copy-code.js"></script>
+  <script src="./_scripts/search.min.js"></script>
+  <script src="./_scripts/docsify-plugin-flexible-alerts.min.js"></script>
+  <script src="./_scripts/prism-makefile.js"></script>
+  <script src="./_scripts/prism-cmake.js"></script>
+
+  <!-- ✅ 勾选控制面板 -->
+  <div id="pick-panel"></div>
+
+  <style>
+    .sel { display: none; }
+    .sel.picked { display: block; }
+    #pick-panel {
+      position: fixed;
+      right: 16px;
+      top: 16px;
+      background: #fff;
+      border: 1px solid #ddd;
+      padding: 8px 12px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,.1);
+      z-index: 9999;
+      font-size: 14px;
+    }
+    #pick-panel label { display: block; margin: 4px 0; cursor: pointer; }
+  </style>
+
+  <script>
+    // docsify 插件：根据页面 section 生成勾选框
+    ($docsify.plugins = ($docsify.plugins || [])).push(function (hook, vm) {
+      hook.doneEach(function () {
+        const panel = document.getElementById('pick-panel');
+        panel.innerHTML = ''; // 清空旧的
+
+        // 找到所有带 .sel 的 section
+        const sections = document.querySelectorAll('.markdown-section section.sel');
+        sections.forEach((sec, idx) => {
+          const key = sec.getAttribute('data-key') || `S${idx}`;
+          const title = sec.querySelector('h1,h2,h3,h4,h5,h6')?.innerText || key;
+
+          // 默认不显示
+          sec.classList.remove('picked');
+
+          // 在面板里加复选框
+          const label = document.createElement('label');
+          label.innerHTML = `<input type="checkbox" data-key="${key}"> ${title}`;
+          panel.appendChild(label);
+
+          // 勾选时切换显示
+          label.querySelector('input').addEventListener('change', (e) => {
+            sec.classList.toggle('picked', e.target.checked);
+          });
+
+          // 给 section 标记 key
+          sec.setAttribute('data-key', key);
+        });
+      });
+    });
+  </script>
+</body>
+</html>
